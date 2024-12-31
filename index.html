@@ -143,6 +143,226 @@
             color: #333;
             margin-top: 40px;
         }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #ffefd5, #ffc0cb);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #ff69b4;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .card-slider-section {
+            padding: 40px;
+            background: #fff5f8;
+            text-align: center;
+            position: relative;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px;
+            justify-content: start;
+        }
+
+        .compliment-card {
+            min-width: 250px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .compliment-card h3 {
+            font-size: 1.5rem;
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+
+        .compliment-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .popup-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .popup-button:hover {
+            background: #db3f94;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .popup p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .close-popup {
+            margin-top: 10px;
+            padding: 5px 15px;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-popup:hover {
+            background: #db3f94;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+        }
+        .song-section {
+            background: #ffdee9;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .song-card {
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .song-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .song-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .song-card button:hover {
+            background: #db3f94;
+        }
+        .memories-section {
+    background: #ffe4e1;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.memory-card {
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.memory-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.memory-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.memory-card button:hover {
+    background: #db3f94;
+}
+
+#gift-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px dashed #ff69b4;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    display: none;
+    z-index: 1000;
+}
+
+#gift-content {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
     </style>
 </head>
 <body>
@@ -246,5 +466,141 @@
             cardContainer.appendChild(card);
         }
     </script>
+    <div class="card-slider-section">
+        <h2>Compliments for Her</h2>
+        <div class="slider-container">
+            <div class="compliment-card">
+                <h3>Her Round Spectacles</h3>
+                <p>They frame her eyes with such perfection, making her charm irresistible.</p>
+                <button class="popup-button" onclick="showPopup('Her spectacles remind me how she adds perspective to my life.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Hairband</h3>
+                <p>That hairband of hers speaks of her elegant and graceful style.</p>
+                <button class="popup-button" onclick="showPopup('Every little detail about her, even her hairband, has a story of elegance.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Eyes</h3>
+                <p>Those eyes hold an entire universe that I could gaze into forever.</p>
+                <button class="popup-button" onclick="showPopup('Her eyes, a window to a soul so beautiful, it leaves me in awe.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Wristwatch</h3>
+                <p>She makes time look beautiful with her timeless grace.</p>
+                <button class="popup-button" onclick="showPopup('Her wristwatch is a reminder that every second with her is precious.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Angry Face</h3>
+                <p>Even her anger is adorable and filled with so much emotion.</p>
+                <button class="popup-button" onclick="showPopup('Her angry face is my favorite; it’s the cutest thing to calm down.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Songs</h3>
+                <p>Every melody she hums is more magical than anything I’ve heard.</p>
+                <button class="popup-button" onclick="showPopup('Her songs are the rhythm my heart beats to.')">See More</button>
+            </div>
+            <div class="compliment-card">
+                <h3>Her Beautiful Fingers on Guitar</h3>
+                <p>Her fingers strumming the guitar create a masterpiece every time.</p>
+                <button class="popup-button" onclick="showPopup('Those small fingers create big magic on the guitar, leaving me mesmerized.')">See More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <p id="popup-content"></p>
+        <button class="close-popup" onclick="closePopup()">Close</button>
+    </div>
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+    <script>
+        function showPopup(message) {
+            document.getElementById('popup-content').textContent = message;
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+        <div class="section song-section">
+            <h2>Her Favorite Songs</h2>
+            <div id="song-container">
+                <div class="song-card">
+                    <img src="https://via.placeholder.com/350x150" alt="Song 1 Image">
+                    <h3>Song 1</h3>
+                    <button data-song="song1.mp3">Play</button>
+                </div>
+                <div class="song-card">
+                    <img src="https://via.placeholder.com/350x150" alt="Song 2 Image">
+                    <h3>Song 2</h3>
+                    <button data-song="song2.mp3">Play</button>
+                </div>
+                <div class="song-card">
+                    <img src="https://via.placeholder.com/350x150" alt="Song 3 Image">
+                    <h3>Song 3</h3>
+                    <button data-song="song3.mp3">Play</button>
+                </div>
+            </div>
+            <audio id="audio-player"></audio>
+        </div>
+
+        <script>
+            document.querySelectorAll('.song-card button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const songSrc = this.getAttribute('data-song');
+                    const audioPlayer = document.getElementById('audio-player');
+                    audioPlayer.src = songSrc;
+                    audioPlayer.play();
+                });
+            });
+        </script>
+
+<div class="section memories-section">
+    <h2>Memorable Moments</h2>
+    <div class="memory-card">
+        <img src="https://via.placeholder.com/350x200" alt="Memory 1">
+        <p>A beautiful day we spent at the park. 🌸</p>
+        <button class="gift-button" data-dish="Pasta Alfredo">Unwrap Gift</button>
+    </div>
+    <div class="memory-card">
+        <img src="https://via.placeholder.com/350x200" alt="Memory 2">
+        <p>Your masterpiece painting. 🎨</p>
+        <button class="gift-button" data-dish="Chocolate Cake">Unwrap Gift</button>
+    </div>
+    <div class="memory-card">
+        <img src="https://via.placeholder.com/350x200" alt="Memory 3">
+        <p>A magical night at the beach. 🌊</p>
+        <button class="gift-button" data-dish="Sushi">Unwrap Gift</button>
+    </div>
+    <div id="gift-box" class="hidden">
+        <div id="gift-content">
+            <p>Your Surprise: <span id="dish-name"></span></p>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.gift-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const dishName = this.getAttribute('data-dish');
+        const giftBox = document.getElementById('gift-box');
+        const dishNameElement = document.getElementById('dish-name');
+
+        dishNameElement.textContent = dishName;
+        giftBox.style.display = 'block';
+
+        // Hide gift box after 5 seconds
+        setTimeout(() => {
+            giftBox.style.display = 'none';
+        }, 5000);
+    });
+});
+
+</script>
+<footer>
+    <p>I created this just for you. Every second with you is special. 💖</p>
+</footer>
 </body>
 </html>
