@@ -13,7 +13,7 @@ Love-Gift-Memories
 HTML , CSS , Javascript
 
 #### CONCEPTS AND BEST PRACTICES :
-Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
+
 
 #### USAGE :
 #### LICENSE :
