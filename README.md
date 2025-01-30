@@ -10,7 +10,7 @@ Love-Gift-Memories
 #### ACKNOWLEDGEMENTS :
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-HTML , CSS , Javascript
+
 
 #### CONCEPTS AND BEST PRACTICES :
 
