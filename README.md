@@ -12,7 +12,7 @@ Love-Gift-Memories
 #### TECHNOLOGIES :
 
 
-#### CONCEPTS AND BEST PRACTICES :
+#### CONCEPTS AND TECHNIQUES:
 
 
 #### USAGE :
