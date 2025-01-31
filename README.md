@@ -10,9 +10,10 @@ Love-Gift-Memories
 #### ACKNOWLEDGEMENTS :
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-
+HTML5 , CSS , Plane Javascript 
 
 #### CONCEPTS AND TECHNIQUES:
+
 
 
 #### USAGE :
