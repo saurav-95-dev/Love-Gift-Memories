@@ -37,7 +37,13 @@
         .button:hover::after{
          visibility: visible;
          opacity: 1;
-}
+        }
+
+        .button.click-effect {
+    transform: scale(0.95); /* Shrink slightly */
+    background-color: #7a5aaa; /* Click color */
+  }
+
 
         * {
             margin: 0;
@@ -414,7 +420,21 @@
 
     <div class="section nickname-section">
         <h2>Your Unique Nicknames</h2>
-        <button class="button" onclick="revealNickname()">Reveal Nickname</button>
+        <button class="button" onclick="revealNickname()
+         dropdownBtn.addEventListener('click', () => {
+          // Add click effect class
+          dropdownBtn.classList.add('click-effect');
+    
+          // Remove the effect after a short delay to reset.  
+          setTimeout(() => {
+            dropdownBtn.classList.remove('click-effect');
+          }, 100); // Adjust timing as needed
+    
+          // Toggle dropdown menu
+          dropdownMenu.classList.toggle('active');
+        });
+        
+        ">Reveal Nickname</button>
 
         <div id="nickname-card-container"></div>
     </div>
