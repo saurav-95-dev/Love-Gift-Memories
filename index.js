@@ -89,17 +89,20 @@ function showPopup(message) {
     document.getElementById('popup-content').textContent = message;
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
-    
-    let button = document.querySelector(".popup-button");
-    
-    button.classList.add("click-effect"); 
 
-    // Remove class after a short delay so animation can be repeated on next click
+    // Wait for the popup to be fully displayed before applying the effect
     setTimeout(() => {
-        button.classList.remove("click-effect");
-    }, 200); // Adjust timing to match transition duration
+        let button = document.querySelector(".popup-button");
+        if (button) { // Ensure button exists before adding the class
+            button.classList.add("click-effect");
 
+            setTimeout(() => {
+                button.classList.remove("click-effect");
+            }, 200);
+        }
+    }, 100); // Small delay to ensure the button is rendered
 }
+
 
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
