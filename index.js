@@ -109,3 +109,14 @@ document.querySelectorAll('.gift-button').forEach(button => {
         }, 5000);
     });
 });
+
+function revealNickname() {
+    let button = document.querySelector(".button");
+    
+    button.classList.add("click-effect"); 
+
+    // Remove class after a short delay so animation can be repeated on next click
+    setTimeout(() => {
+        button.classList.remove("click-effect");
+    }, 200); // Adjust timing to match transition duration
+}
