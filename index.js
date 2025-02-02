@@ -55,7 +55,8 @@ function revealNickname() {
     reasonText.className = 'reason-text';
     reasonText.textContent = nickname.reason;
     reasonCard.appendChild(reasonText);
-
+    
+    //Click-effect animations : 
     let button = document.querySelector(".button");
     
     button.classList.add("click-effect"); 
@@ -64,7 +65,7 @@ function revealNickname() {
     setTimeout(() => {
         button.classList.remove("click-effect");
     }, 200); // Adjust timing to match transition duration
-    
+
 
     reasonButton.addEventListener('click', () => {
         reasonCard.style.display = 'block';
@@ -88,6 +89,16 @@ function showPopup(message) {
     document.getElementById('popup-content').textContent = message;
     document.getElementById('popup').style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
+    
+    let button = document.querySelector(".popup-button");
+    
+    button.classList.add("click-effect"); 
+
+    // Remove class after a short delay so animation can be repeated on next click
+    setTimeout(() => {
+        button.classList.remove("click-effect");
+    }, 200); // Adjust timing to match transition duration
+
 }
 
 function closePopup() {
