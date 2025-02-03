@@ -107,6 +107,17 @@ function showPopup(message) {
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
+      // Wait for the popup to be fully displayed before applying the effect
+      setTimeout(() => {
+        let button = document.querySelector(".popup-button");
+        if (button) { // Ensure button exists before adding the class
+            button.classList.add("click-effect");
+
+            setTimeout(() => {
+                button.classList.remove("click-effect");
+            }, 200);
+        }
+    }, 100); // Small delay to ensure the button is rendered
 }
 
 document.querySelectorAll('.song-card button').forEach(button => {
