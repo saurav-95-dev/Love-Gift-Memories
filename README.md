@@ -13,12 +13,14 @@ Love-Gift-Memories
 HTML5 , CSS , Plane Javascript 
 
 #### CONCEPTS AND TECHNIQUES:
+Animations
 
 
 
 #### USAGE :
 #### LICENSE :
 #### CONTACT :
+
 You can reach out to me at -> devsaurabh086@gmail.com
 #### TRY IT -->  https://angrybird-tamaatar.netlify.app/
 
