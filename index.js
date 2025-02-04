@@ -146,3 +146,17 @@ document.querySelectorAll('.gift-button').forEach(button => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const seeMoreButton = document.querySelector(".see-more-button");
+
+    seeMoreButton.addEventListener("click", function() {
+        this.classList.add("click-effect");
+
+        // Remove the effect after a short delay
+        setTimeout(() => {
+            this.classList.remove("click-effect");
+        }, 200);
+    });
+});
+
+
