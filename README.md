@@ -8,12 +8,14 @@
 Love-Gift-Memories
 
 #### ACKNOWLEDGEMENTS :
+
 #### DESCRIPTION :
+
 #### TECHNOLOGIES :
 HTML5 , CSS , Plane Javascript 
 
 #### CONCEPTS AND TECHNIQUES:
-Animations
+
 
 
 
@@ -22,5 +24,6 @@ Animations
 #### CONTACT :
 
 You can reach out to me at -> devsaurabh086@gmail.com
+
 #### TRY IT -->  https://angrybird-tamaatar.netlify.app/
 
