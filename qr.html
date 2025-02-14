@@ -3,59 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan to Unlock Love</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            font-size: 2rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        #qr-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-        }
-        .heart {
-            position: absolute;
-            bottom: 0;
-            font-size: 20px;
-            animation: floatUp 5s linear infinite;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-100vh); opacity: 0; }
-        }
-    </style>
+    <title>Scan to Reveal Love</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Scan to Unlock a Special Surprise 💖</h1>
-    <div id="qr-container">
-        <img src="YOUR_QR_CODE_URL" alt="Scan QR Code" width="200">
+<body class="qr-page">
+    <div class="container">
+        <h2>Scan the QR Code to Reveal Love 💖</h2>
+        <img src="assets/qr-code.png" alt="Scan Me">
+        <p>Unlock a special message by scanning</p>
     </div>
     
-    <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.innerHTML = "❤️";
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 500);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
